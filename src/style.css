@@ -1,0 +1,113 @@
+body{
+    background-color: #263238;
+}
+
+.loader {
+        position: absolute;
+            top: 25%;
+            left: 45%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #263238;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.search-form input{
+    outline:none;
+    width: 320px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 2px transparent solid;
+    color: rgba(169, 169, 170, 0.60);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.24px;
+    transition: border-color .6s linear;
+}
+.search-form input:focus{
+    border: 2px #ff3d00 solid;
+}
+.search-form button,
+.load-more{
+    cursor: pointer;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 4px;
+    background-color: #ff3d00;
+    border: 1px solid transparent;
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .7s ease;
+}
+.search-form button:hover,
+.load-more:hover{
+    background-color: transparent;
+    border-color: #ff3d00;
+    color: #ff3d00;
+}
+.gallery{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+
+}
+.photo-card{
+    width: 500px;
+    height: 500px;
+    background-color: #FFF;
+    display: inline-block;
+}
+.photo-card img{
+    display: block;
+    width: 100%;
+    height: 90%;
+
+}
+.info{
+    background-color:rgba(169, 169, 170, 0.60);;
+    display: flex;
+    justify-content: space-around;
+}
+.info-title{
+    color: #ff3d00;
+    margin-right: 10px;
+}
+.load-more{
+   margin: 50px auto 0 auto;
+    display: block;
+}
